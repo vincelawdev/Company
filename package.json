@@ -21,7 +21,14 @@
     "lint:js:fix": "eslint --fix src/**"
   },
   "eslintConfig": {
+    "settings": {
+      "react": {        
+        "version": "detect"
+      }
+    },
     "extends": [
+      "eslint:recommended",
+      "plugin:react/recommended",
       "airbnb-base",
       "airbnb/hooks"
     ],
