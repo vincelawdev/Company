@@ -1,10 +1,20 @@
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app) and uses [JSON Server](https://company-json.herokuapp.com/) on Heroku.
 
-## Available Scripts
+# Installation
 
-In the project directory, you can run:
+Git clone this repository.
 
-### `yarn start`
+Run `yarn install` or `npm install`.
+
+This project's packages were added with [yarn](https://yarnpkg.com/en/) and there is a `yarn.lock` file.
+
+# Available Scripts
+
+In the project directory, you can run the following scripts.
+
+## Local Environment
+
+### `yarn start` or `npm start`.
 
 Runs the app in the development mode.<br />
 Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
@@ -12,16 +22,20 @@ Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 The page will reload if you make edits.<br />
 You will also see any lint errors in the console.
 
-### `yarn test`
+## Unit Testing
+
+### `yarn test` or `npm run test`.
 
 Launches the test runner in the interactive watch mode.<br />
 See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
 
-### `yarn test:coverage`
+### `yarn test:coverage` or `npm run test:coverage`.
 
 Generates a test coverage report in the `coverage` folder.
 
-### `yarn build`
+## Builds
+
+### `yarn build` or `npm run build`.
 
 Builds the app for production to the `build` folder.<br />
 It correctly bundles React in production mode and optimizes the build for the best performance.
@@ -31,18 +45,20 @@ Your app is ready to be deployed!
 
 See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
 
-### `yarn lint:js`
+## Linting
+
+### `yarn lint:js` or `npm run lint:js`.
 
 Runs ESLint on all Javascript files in the `src` folder.
 
-### `yarn lint:js:fix`
+### `yarn lint:js:fix` or `npm run lint:js:fix`.
 
 Runs ESLint automatic fixer on all Javascript files in the `src` folder.
 
-### `yarn lint:css`
+### `yarn lint:css` or `npm run lint:css`.
 
 Runs stylelint on all files in the `src` folder.
 
-### `yarn lint:css:fix`
+### `yarn lint:css:fix` or `npm run lint:css:fix`.
 
 Runs stylelint automatic fixer on all files in the `src` folder.
