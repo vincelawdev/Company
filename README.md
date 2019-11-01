@@ -33,8 +33,16 @@ See the section about [deployment](https://facebook.github.io/create-react-app/d
 
 ### `yarn lint:js`
 
-Runs ESLint on all Javascripts files in the `src` folder.
+Runs ESLint on all Javascript files in the `src` folder.
 
 ### `yarn lint:js:fix`
 
-Runs ESLint automatic fixer on all Javascripts files in the `src` folder.
+Runs ESLint automatic fixer on all Javascript files in the `src` folder.
+
+### `yarn lint:css`
+
+Runs stylelint on all files in the `src` folder.
+
+### `yarn lint:css:fix`
+
+Runs stylelint automatic fixer on all files in the `src` folder.
