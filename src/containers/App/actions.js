@@ -21,7 +21,7 @@ export function getCompanyDataError(error) {
   };
 }
 
-export function addTodo(dispatch) {
+export const getCompanyData = () => (dispatch) => {
   dispatch(getCompanyDataInit());
 
   axios
@@ -32,4 +32,4 @@ export function addTodo(dispatch) {
     .catch((error) => {
       dispatch(getCompanyDataError(error));
     });
-}
+};
