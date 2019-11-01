@@ -1,8 +1,15 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+import { configureStore } from 'redux-starter-kit';
+import { Provider } from 'react-redux';
 import { createGlobalStyle } from 'styled-components';
 import App from './App';
+import rootReducer from './reducers';
 import * as serviceWorker from './serviceWorker';
+
+const store = configureStore({
+  reducer: rootReducer,
+});
 
 const GlobalStyle = createGlobalStyle`
   body {
@@ -15,12 +22,14 @@ const GlobalStyle = createGlobalStyle`
   }
 `;
 
-ReactDOM.render(<React.Fragment>
+ReactDOM.render(
+  <Provider store={store}>
     <GlobalStyle />
     <App />
-    </React.Fragment>,
-// eslint-disable-next-line no-undef
-document.getElementById('root'));
+  </Provider>,
+  // eslint-disable-next-line no-undef
+  document.getElementById('root'),
+);
 
 // If you want your app to work offline and load faster, you can change
 // unregister() to register() below. Note this comes with some pitfalls.
