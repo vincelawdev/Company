@@ -1,5 +1,8 @@
 import axios from 'axios';
-import { GET_COMPANY_DATA_INIT, GET_COMPANY_DATA_SUCCESS, GET_COMPANY_DATA_ERROR } from './constants';
+import {
+  GET_COMPANY_DATA_INIT, GET_COMPANY_DATA_SUCCESS, GET_COMPANY_DATA_ERROR,
+  GET_EMPLOYEES_DATA_INIT, GET_EMPLOYEES_DATA_SUCCESS, GET_EMPLOYEES_DATA_ERROR,
+} from './constants';
 
 export function getCompanyDataInit() {
   return {
@@ -31,5 +34,38 @@ export const getCompanyData = () => (dispatch) => {
     })
     .catch((error) => {
       dispatch(getCompanyDataError(error));
+    });
+};
+
+export function getEmployeesDataInit() {
+  return {
+    type: GET_EMPLOYEES_DATA_INIT,
+  };
+}
+
+export function getEmployeesDataSuccess(employees) {
+  return {
+    type: GET_EMPLOYEES_DATA_SUCCESS,
+    employees,
+  };
+}
+
+export function getEmployeesDataError(error) {
+  return {
+    type: GET_EMPLOYEES_DATA_ERROR,
+    error,
+  };
+}
+
+export const getEmployeesData = () => (dispatch) => {
+  dispatch(getEmployeesDataInit());
+
+  axios
+    .get('https://company-json.herokuapp.com/employees')
+    .then((response) => {
+      dispatch(getEmployeesDataSuccess(response.data));
+    })
+    .catch((error) => {
+      dispatch(getEmployeesDataError(error));
     });
 };

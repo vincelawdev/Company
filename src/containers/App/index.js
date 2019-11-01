@@ -1,6 +1,6 @@
 import React, { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import { getCompanyData } from './actions';
+import { getCompanyData, getEmployeesData } from './actions';
 
 const App = () => {
   const {
@@ -13,6 +13,7 @@ const App = () => {
 
   useEffect(() => {
     dispatch(getCompanyData());
+    dispatch(getEmployeesData());
   }, [dispatch]);
 
   return (
