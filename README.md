@@ -1,5 +1,7 @@
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app) and uses its own [JSON Server](https://company-json.herokuapp.com/) on Heroku.
 
+This app has been deployed to Heroku and it can be viewed at: [https://vince-company.herokuapp.com/](https://vince-company.herokuapp.com/)
+
 The directory structure follows a similar style to [React Boilerplate's](https://github.com/react-boilerplate/react-boilerplate/tree/master/app) directory structure.
 
 [Redux Starter Kit](https://redux-starter-kit.js.org/) was used to simplify the Redux setup process.
