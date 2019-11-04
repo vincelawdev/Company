@@ -42,7 +42,8 @@
       "airbnb/hooks"
     ],
     "rules": {
-      "linebreak-style": 0
+      "linebreak-style": 0,
+      "indent": ["error", 2]
     }
   },
   "stylelint": {

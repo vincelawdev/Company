@@ -4,6 +4,7 @@ import styled from 'styled-components';
 import { format } from 'date-fns';
 
 const HeaderWrapper = styled.header`
+    min-height: 53px;
     margin: 0 0 30px 0;
     padding: 15px 30px;
     display: block;
@@ -62,7 +63,7 @@ const Header = () => {
 
   return (
     <HeaderWrapper>
-        {renderCompanyInfo()}
+      {renderCompanyInfo()}
     </HeaderWrapper>
   );
 };

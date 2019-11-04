@@ -24,14 +24,14 @@ const EmployeesHeading = styled.h1`
 `;
 
 const EmployeesBar = () => (
-    <EmployeesRow>
-        <EmployeesColumn>
-            <EmployeesHeading>Our Employees</EmployeesHeading>
-        </EmployeesColumn>
-        <EmployeesColumn>
+  <EmployeesRow>
+    <EmployeesColumn>
+      <EmployeesHeading>Our Employees</EmployeesHeading>
+    </EmployeesColumn>
+    <EmployeesColumn>
             Sort by:
-        </EmployeesColumn>
-    </EmployeesRow>
+    </EmployeesColumn>
+  </EmployeesRow>
 );
 
 export default EmployeesBar;
