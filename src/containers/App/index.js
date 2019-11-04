@@ -1,6 +1,7 @@
 import React, { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { getCompanyData, getEmployeesData } from './actions';
+import Header from '../../components/Header';
 
 const App = () => {
   const {
@@ -17,10 +18,10 @@ const App = () => {
   }, [dispatch]);
 
   return (
-    <div>
+    <Header>
       Loading: {loading}<br />
       Error: {error}<br />
-    </div>
+    </Header>
   );
 };
 
