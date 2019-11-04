@@ -3,6 +3,7 @@ import { useSelector } from 'react-redux';
 import styled from 'styled-components';
 
 const EmployeesBarRow = styled.section`
+  margin-bottom: 20px;
   padding-bottom: 8px;
   display: flex;
   border-bottom: 1px solid black;
