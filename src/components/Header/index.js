@@ -4,33 +4,33 @@ import styled from 'styled-components';
 import { format } from 'date-fns';
 
 const HeaderWrapper = styled.header`
-    min-height: 53px;
-    margin: 0 0 30px 0;
-    padding: 15px 30px;
-    display: block;
-    background-color: lightgrey;
-    border-bottom: 2px solid black;
+  min-height: 53px;
+  margin: 0 0 30px 0;
+  padding: 15px 30px;
+  display: block;
+  background-color: lightgrey;
+  border-bottom: 2px solid black;
 `;
 
 const HeaderCompanyName = styled.h6`
-    margin: 0;
-    padding: 0;
-    font-size: 22px;
-    line-height: 30px;
-    color: black;
+  margin: 0;
+  padding: 0;
+  font-size: 22px;
+  line-height: 30px;
+  color: black;
 `;
 
 const HeaderRow = styled.div`
-    display: flex;
+  display: flex;
 `;
 
 const HeaderColumn = styled.div`
-    flex-grow: 1;
-    flex-basis: 50%;
+  flex-grow: 1;
+  flex-basis: 50%;
 
-    &:last-child {
-        text-align: right;
-    }
+  &:last-child {
+      text-align: right;
+  }
 `;
 
 const Header = () => {

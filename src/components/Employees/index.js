@@ -2,8 +2,32 @@ import React from 'react';
 import { useSelector } from 'react-redux';
 import styled from 'styled-components';
 
+const EmployeesBarRow = styled.section`
+  padding-bottom: 8px;
+  display: flex;
+  border-bottom: 1px solid black;
+`;
+
+const EmployeesBarColumn = styled.div`
+  flex-grow: 1;
+
+  &:last-child {
+    font-size: 14px;
+    line-height: 14px;
+    text-align: right;
+  }
+`;
+
+const EmployeesBarHeading = styled.h1`
+  margin: 0;
+  padding: 0;
+  font-size: 18px;
+  line-height: 18px;
+  color: black;
+`;
+
 const EmployeesContainer = styled.section`
-    display: flex;
+  display: flex;
 `;
 
 const Employees = () => {
@@ -32,9 +56,17 @@ const Employees = () => {
   };
 
   return (
-    <EmployeesContainer>
-      {renderEmployees()}
-    </EmployeesContainer>
+    <>
+      <EmployeesBarRow>
+        <EmployeesBarColumn>
+          <EmployeesBarHeading>Our Employees</EmployeesBarHeading>
+        </EmployeesBarColumn>
+        <EmployeesBarColumn>Sort by | Search</EmployeesBarColumn>
+      </EmployeesBarRow>
+      <EmployeesContainer>
+        {renderEmployees()}
+      </EmployeesContainer>
+    </>
   );
 };
 
