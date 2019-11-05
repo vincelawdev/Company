@@ -25,8 +25,7 @@ const HeaderRow = styled.div`
 `;
 
 const HeaderColumn = styled.div`
-  flex-grow: 1;
-  flex-basis: 50%;
+  flex: 1 0 50%;
 
   &:last-child {
       text-align: right;

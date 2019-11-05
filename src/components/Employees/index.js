@@ -1,6 +1,7 @@
 import React from 'react';
 import { useSelector } from 'react-redux';
 import styled from 'styled-components';
+import EmployeeCard from '../EmployeeCard';
 
 const EmployeesBarRow = styled.section`
   margin-bottom: 20px;
@@ -28,7 +29,10 @@ const EmployeesBarHeading = styled.h1`
 `;
 
 const EmployeesContainer = styled.section`
+  margin: 0 -15px;
   display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
 `;
 
 const Employees = () => {
@@ -49,7 +53,7 @@ const Employees = () => {
     // display employees only after it has loaded without errors
     if (!loading && error === null && Array.isArray(employees) && employees.length > 0) {
       return employees.map((employee) => (
-        <div key={employee.id}>{employee.firstName}</div>
+        <EmployeeCard employee={employee} key={employee.id} />
       ));
     }
 
