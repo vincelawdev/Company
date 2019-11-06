@@ -35,6 +35,10 @@ const EmployeesContainer = styled.section`
   flex-wrap: wrap;
 `;
 
+const EmployeesLoading = styled.div`
+  margin: 0 15px;
+`;
+
 const Employees = () => {
   const {
     loading, error, employees,
@@ -47,7 +51,7 @@ const Employees = () => {
   const renderEmployees = () => {
     // display loading message
     if (loading && error === null) {
-      return 'Loading...';
+      return (<EmployeesLoading>Loading...</EmployeesLoading>);
     }
 
     // display employees only after it has loaded without errors
