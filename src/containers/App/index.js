@@ -4,6 +4,7 @@ import { getCompanyData, getEmployeesData } from './actions';
 import Header from '../../components/Header';
 import Container from '../../components/Container';
 import Employees from '../../components/Employees';
+import EmployeeLightbox from '../../components/EmployeeLightbox';
 
 const App = () => {
   const dispatch = useDispatch();
@@ -20,6 +21,7 @@ const App = () => {
       <Container>
         <Employees />
       </Container>
+      <EmployeeLightbox />
     </>
   );
 };
