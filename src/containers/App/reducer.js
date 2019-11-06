@@ -9,7 +9,7 @@ const initialState = {
   error: null,
   companyInfo: {},
   employees: [],
-  selectedEmployee: null,
+  selectedEmployeeId: null,
 };
 
 export default function appReducer(state = initialState, action) {
@@ -52,12 +52,12 @@ export default function appReducer(state = initialState, action) {
   case SET_SELECTED_EMPLOYEE:
     return {
       ...state,
-      selectedEmployee: action.id,
+      selectedEmployeeId: action.id,
     };
   case RESET_SELECTED_EMPLOYEE:
     return {
       ...state,
-      selectedEmployee: null,
+      selectedEmployeeId: null,
     };
   default:
     return state;

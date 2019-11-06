@@ -71,14 +71,14 @@ export const getEmployeesData = () => (dispatch) => {
     });
 };
 
-export function setSelectedEmployee(id) {
+export function setSelectedEmployeeId(id) {
   return {
     type: SET_SELECTED_EMPLOYEE,
     id,
   };
 }
 
-export function resetSelectedEmployee() {
+export function resetSelectedEmployeeId() {
   return {
     type: RESET_SELECTED_EMPLOYEE,
   };

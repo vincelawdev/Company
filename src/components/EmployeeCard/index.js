@@ -3,7 +3,7 @@ import { useDispatch, useSelector } from 'react-redux';
 import styled from 'styled-components';
 import PropTypes from 'prop-types';
 import EmployeeCardBio from './EmployeeCardBio';
-import { setSelectedEmployee } from '../../containers/App/actions';
+import { setSelectedEmployeeId } from '../../containers/App/actions';
 
 const EmployeeContainer = styled.div`
   margin: 0 15px 20px 15px;
@@ -47,13 +47,13 @@ const EmployeeCard = (props) => {
     event.target.src = 'https://via.placeholder.com/128';
   };
 
-  const selectedEmployee = useSelector((state) => state.global.selectedEmployee);
+  const selectedEmployeeId = useSelector((state) => state.global.selectedEmployeeId);
   const dispatch = useDispatch();
 
   return (
     <EmployeeContainer
-      selected={id === selectedEmployee}
-      onClick={() => dispatch(setSelectedEmployee(id))}
+      selected={id === selectedEmployeeId}
+      onClick={() => dispatch(setSelectedEmployeeId(id))}
     >
       <EmployeeAvatar src={avatar} onError={fallbackAvatar} alt="{firstName} {lastName}" />
       <EmployeeName>{firstName} {lastName}</EmployeeName>
