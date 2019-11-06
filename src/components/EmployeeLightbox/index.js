@@ -36,8 +36,8 @@ const EmployeeLightboxContent = styled.div`
   @media (min-width: 992px) {
     width: 50%;
     height: 50%;
-    min-height: 250px;
-    max-height: auto;
+    min-height: 300px;
+    max-height: unset;
     flex-direction: row;
   }
 `;
