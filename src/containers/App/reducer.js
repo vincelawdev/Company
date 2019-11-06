@@ -1,6 +1,7 @@
 import {
   GET_COMPANY_DATA_INIT, GET_COMPANY_DATA_SUCCESS, GET_COMPANY_DATA_ERROR,
   GET_EMPLOYEES_DATA_INIT, GET_EMPLOYEES_DATA_SUCCESS, GET_EMPLOYEES_DATA_ERROR,
+  SET_SELECTED_EMPLOYEE, RESET_SELECTED_EMPLOYEE,
 } from './constants';
 
 const initialState = {
@@ -8,6 +9,7 @@ const initialState = {
   error: null,
   companyInfo: {},
   employees: [],
+  selectedEmployee: null,
 };
 
 export default function appReducer(state = initialState, action) {
@@ -46,6 +48,16 @@ export default function appReducer(state = initialState, action) {
       ...state,
       loading: false,
       error: action.error,
+    };
+  case SET_SELECTED_EMPLOYEE:
+    return {
+      ...state,
+      selectedEmployee: action.id,
+    };
+  case RESET_SELECTED_EMPLOYEE:
+    return {
+      ...state,
+      selectedEmployee: null,
     };
   default:
     return state;

@@ -2,6 +2,7 @@ import axios from 'axios';
 import {
   GET_COMPANY_DATA_INIT, GET_COMPANY_DATA_SUCCESS, GET_COMPANY_DATA_ERROR,
   GET_EMPLOYEES_DATA_INIT, GET_EMPLOYEES_DATA_SUCCESS, GET_EMPLOYEES_DATA_ERROR,
+  SET_SELECTED_EMPLOYEE, RESET_SELECTED_EMPLOYEE,
 } from './constants';
 
 export function getCompanyDataInit() {
@@ -69,3 +70,16 @@ export const getEmployeesData = () => (dispatch) => {
       dispatch(getEmployeesDataError(error));
     });
 };
+
+export function setSelectedEmployee(id) {
+  return {
+    type: SET_SELECTED_EMPLOYEE,
+    id,
+  };
+}
+
+export function resetSelectedEmployee() {
+  return {
+    type: RESET_SELECTED_EMPLOYEE,
+  };
+}

@@ -1,13 +1,17 @@
 import React from 'react';
+import { useDispatch, useSelector } from 'react-redux';
 import styled from 'styled-components';
 import PropTypes from 'prop-types';
 import EmployeeCardBio from './EmployeeCardBio';
+import { setSelectedEmployee } from '../../containers/App/actions';
 
 const EmployeeContainer = styled.div`
   margin: 0 15px 20px 15px;
   flex: 1 0 calc(100% - 30px);
   box-sizing: border-box;
   border: 1px solid black;
+  background-color: ${(props) => (props.selected ? 'yellow' : 'transparent')};
+  cursor: pointer;
 
   /* Large devices (desktops, 992px and up) */
   @media (min-width: 992px) {
@@ -31,6 +35,7 @@ const EmployeeName = styled.div`
 
 const EmployeeCard = (props) => {
   const {
+    id,
     firstName,
     lastName,
     avatar,
@@ -42,8 +47,14 @@ const EmployeeCard = (props) => {
     event.target.src = 'https://via.placeholder.com/128';
   };
 
+  const selectedEmployee = useSelector((state) => state.global.selectedEmployee);
+  const dispatch = useDispatch();
+
   return (
-    <EmployeeContainer>
+    <EmployeeContainer
+      selected={id === selectedEmployee}
+      onClick={() => dispatch(setSelectedEmployee(id))}
+    >
       <EmployeeAvatar src={avatar} onError={fallbackAvatar} alt="{firstName} {lastName}" />
       <EmployeeName>{firstName} {lastName}</EmployeeName>
       <EmployeeCardBio bio={bio} />
@@ -53,6 +64,11 @@ const EmployeeCard = (props) => {
 
 EmployeeCard.propTypes = {
   employee: PropTypes.object.isRequired,
+  selected: PropTypes.bool,
+};
+
+EmployeeCard.defaultProps = {
+  selected: false,
 };
 
 export default EmployeeCard;
