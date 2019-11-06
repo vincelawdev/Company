@@ -1,7 +1,6 @@
 import React from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import styled from 'styled-components';
-import PropTypes from 'prop-types';
 import { resetSelectedEmployee } from '../../containers/App/actions';
 
 const EmployeeLightboxOverlay = styled.div`
@@ -64,14 +63,6 @@ const EmployeeLightbox = () => {
       </EmployeeLightboxContent>
     </EmployeeLightboxOverlay>
   );
-};
-
-EmployeeLightbox.propTypes = {
-  selected: PropTypes.bool,
-};
-
-EmployeeLightbox.defaultProps = {
-  selected: false,
 };
 
 export default EmployeeLightbox;
