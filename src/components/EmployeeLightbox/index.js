@@ -22,6 +22,7 @@ const EmployeeLightboxContent = styled.div`
   right: 0;
   width: 90%;
   height: auto;
+  min-height: 75%;
   max-height: 75%;
   margin: auto;
   padding: 20px 30px;
@@ -35,7 +36,7 @@ const EmployeeLightboxContent = styled.div`
   /* Large devices (desktops, 992px and up) */
   @media (min-width: 992px) {
     width: 50%;
-    height: 50%;
+    height: 60%;
     min-height: 300px;
     max-height: unset;
     flex-direction: row;
