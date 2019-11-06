@@ -55,7 +55,7 @@ const EmployeeCard = (props) => {
       selected={id === selectedEmployeeId}
       onClick={() => dispatch(setSelectedEmployeeId(id))}
     >
-      <EmployeeAvatar src={avatar} onError={fallbackAvatar} alt="{firstName} {lastName}" />
+      <EmployeeAvatar src={avatar} onError={fallbackAvatar} alt={`${firstName} ${lastName}`} />
       <EmployeeName>{firstName} {lastName}</EmployeeName>
       <EmployeeCardBio bio={bio} />
     </EmployeeContainer>
