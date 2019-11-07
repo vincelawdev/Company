@@ -86,7 +86,7 @@ const Employees = () => {
           <EmployeesBarHeading>Our Employees</EmployeesBarHeading>
         </EmployeesBarColumn>
         <EmployeesBarColumn>
-          Sort by <select><option>first name</option></select> | Search
+          Sort by <select><option>first name</option></select>
         </EmployeesBarColumn>
       </EmployeesBarRow>
       <EmployeesContainer>
