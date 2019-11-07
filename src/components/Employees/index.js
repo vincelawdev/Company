@@ -48,6 +48,18 @@ const Employees = () => {
     employees: state.global.employees,
   }));
 
+  const sortFirstName = (a, b) => {
+    if (a.firstName < b.firstName) {
+      return -1;
+    }
+
+    if (a.firstName > b.firstName) {
+      return 1;
+    }
+
+    return 0;
+  };
+
   const renderEmployees = () => {
     // display loading message
     if (loading && error === null) {
@@ -56,7 +68,10 @@ const Employees = () => {
 
     // display employees only after it has loaded without errors
     if (!loading && error === null && Array.isArray(employees) && employees.length > 0) {
-      return employees.map((employee) => (
+      // sort employees by first name
+      const sortedEmployees = employees.sort(sortFirstName);
+
+      return sortedEmployees.map((employee) => (
         <EmployeeCard employee={employee} key={employee.id} />
       ));
     }
@@ -70,7 +85,9 @@ const Employees = () => {
         <EmployeesBarColumn>
           <EmployeesBarHeading>Our Employees</EmployeesBarHeading>
         </EmployeesBarColumn>
-        <EmployeesBarColumn>Sort by | Search</EmployeesBarColumn>
+        <EmployeesBarColumn>
+          Sort by <select><option>first name</option></select> | Search
+        </EmployeesBarColumn>
       </EmployeesBarRow>
       <EmployeesContainer>
         {renderEmployees()}
