@@ -33,6 +33,10 @@ const EmployeeLightboxContent = styled.div`
   background-color: white;
   border: 1px solid black;
 
+  @media (min-width: 320px) and (max-width: 991px) and (orientation: landscape) {
+    flex-direction: row;
+  }
+
   /* Large devices (desktops, 992px and up) */
   @media (min-width: 992px) {
     width: 50%;
