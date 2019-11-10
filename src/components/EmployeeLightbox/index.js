@@ -129,7 +129,9 @@ const EmployeeLightbox = () => {
     }
 
     // click outside
-    dispatch(resetSelectedEmployeeId());
+    if (selectedEmployeeId !== null) {
+      dispatch(resetSelectedEmployeeId());
+    }
   };
 
   useEffect(() => {
